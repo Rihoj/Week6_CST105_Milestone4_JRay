@@ -35,6 +35,15 @@ public class DefensivePlayer extends NFLPlayer {
         sacks = ThreadLocalRandom.current().nextInt(0, 75);
     }
 
+    public DefensivePlayer(int tackles, int rushingYards, int interceptions, int kickReturns, int sacks, String firstName, String lastName, int age, String team) {
+        super(firstName, lastName, age, team);
+        this.tackles = tackles;
+        this.rushingYards = rushingYards;
+        this.interceptions = interceptions;
+        this.kickReturns = kickReturns;
+        this.sacks = sacks;
+    }
+
     //Returns string version of DefensivePlayer.
     @Override
     public String toString() {
@@ -42,7 +51,7 @@ public class DefensivePlayer extends NFLPlayer {
                 + "Player Age: " + getAge() + "\n"
                 + "Player Position: " + getPositionType() + "\n";
         if (getTeam() != null) {
-            returnString += getTeam();
+            returnString += getTeam()+"\n";
         }
         returnString += getStats().toString();
         return returnString;

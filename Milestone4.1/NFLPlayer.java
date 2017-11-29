@@ -41,7 +41,7 @@ public abstract class NFLPlayer {
         String returnString = "Player Name: " + getFullName() + "\n"
                 + "Player Age: " + getAge() + "\n";
         if (getTeam() != null) {
-            returnString += getTeam();
+            returnString += getTeam() + "\n";
         }
         return returnString;
     }

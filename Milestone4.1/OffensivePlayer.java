@@ -42,7 +42,7 @@ public class OffensivePlayer extends NFLPlayer {
                 + "Player Age: " + getAge() + "\n"
                 + "Player Position: " + getPositionType() + "\n";
         if (getTeam() != null) {
-            returnString += getTeam();
+            returnString += getTeam()+"\n";
         }
         returnString += getStats().toString();
         return returnString;
@@ -113,5 +113,4 @@ public class OffensivePlayer extends NFLPlayer {
     public void setSacks(int sacks) {
         this.sacks = sacks;
     }
-
 }
